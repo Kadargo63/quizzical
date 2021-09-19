@@ -73,7 +73,7 @@ next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){
         que_count++;
         que_numb++;
-        showQuestions(queCount);
+        showQuestions(que_count);
         queCounter(que_numb);
         clearInterval(counter);
         clearInterval(counterLine);
@@ -104,7 +104,7 @@ function showQuestions(index){
 
     //set onclick attribute to all available options
     for(i=0; i < option.length; i++){
-        option[i].setAttribute("onclick", "optionsSelected(this)");
+        option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
 
