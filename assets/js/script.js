@@ -11,7 +11,7 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
 // if start button clicked
-start_btn.onlick = ()=>{
+start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo");
 }
 
@@ -27,7 +27,7 @@ continue_btn.onclick = ()=>{
     showQuestions(0);
     queCounter(1);
     startTimer(15);
-    startTinmerLine(0);
+    startTimerLine(0);
 }
 
 let timeValue = 15;
@@ -66,7 +66,7 @@ quit_quiz.onclick = ()=>{
 }
 
 const next_btn = document.querySelector("footer .next_btn");
-const bottom_ques_counter = document.querySelector("footer .toal_que");
+const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // if Next button clicked
 next_btn.onclick = ()=>{
