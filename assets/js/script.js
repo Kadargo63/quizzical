@@ -189,3 +189,19 @@ function startTimer(time){
         }
     }
 }
+
+function startTimerLine(time){
+    counterLine = setInterval(timer, 29);
+    function timer(){
+        time += 1;
+        time_line.getElementsByClassName.width = time + "px";
+        if(time > 549){
+            clearInterval(counterLine);
+        }
+    }
+}
+
+function queCounter(index){
+    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    bottom_ques_counter.innerHTML = totalQueCounTag;
+}
