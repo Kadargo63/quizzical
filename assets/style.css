@@ -91,7 +91,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 30px;
+    padding: 0 35px;
     border-top: 1px solid lightgray;
 }
 
@@ -107,6 +107,23 @@ body{
     border-radius: 5px;
     border: 1px solid #007bff;
     transition: all 0.3s ease;
+}
+.buttons button.restart{
+    color: #fff;
+    background: #007bff;
+}
+
+.buttons button.restart:hover{
+    background: #0263ca;
+}
+
+.buttons button.quit{
+    color: #007bff;
+}
+
+.buttons button.quit:hover{
+    color: #fff;
+    background: #007bff;
 }
 
 /* Quiz Box */
@@ -134,6 +151,11 @@ body{
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .quiz_box header .timer{
     color: #004085;
     background: #cce5ff;
@@ -149,7 +171,7 @@ body{
 
 .quiz_box header .timer .time_left_text{
     font-weight: 400;
-    font_size: 17px;
+    font-size: 17px;
     user-select: none;
 }
 
@@ -165,6 +187,20 @@ body{
     background: #1d2d3d;
     border: 1px solid #1d2d3d;
     user-select: none;
+}
+
+.quiz_box section{
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+.quiz_box section .que_text{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz_box section .option_list{
+    padding: 20px 0;
+    display: block;
 }
 
 .quiz_box header .time_line{
@@ -281,7 +317,7 @@ footer .total_que span p:first-child{
     padding-left: 0px;
 }
 
-footer button{
+footer .next_btn{
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -300,7 +336,7 @@ footer button{
     transition: all 0.3s ease;
 }
 
-footer button:hover{
+footer .next_btn:hover{
     background: #0263ca;
 }
 

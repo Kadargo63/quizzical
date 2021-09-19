@@ -44,6 +44,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 // if restart button clicked
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz");
+    result_box.classList.remove("activeResult");
     timeValue = 15;
     que_count = 0;
     que_numb = 1;
@@ -54,6 +55,7 @@ restart_quiz.onclick = ()=>{
     clearInterval(counter);
     clearInterval(counterLine);
     startTimer(widthValue);
+    startTimerLine(widthValue);
     timeText.textContent = "time Left";
     next_btn.classList.remove("show");
 }
@@ -98,7 +100,7 @@ function showQuestions(index){
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 
-    const option = option_list.querySelectorAll("option");
+    const option = option_list.querySelectorAll(".option");
 
     //set onclick attribute to all available options
     for(i=0; i < option.length; i++){
@@ -132,6 +134,7 @@ function optionSelected(answer){
         for(i=0; i < allOptions; i++){
             if(option_list.children[i].textContent == correcAns){
                 option_list.children[i].setAttribute("class", "option correct");
+                option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
                 console.log("Auto selected correct answer.");
             }
         }
@@ -194,7 +197,7 @@ function startTimerLine(time){
     counterLine = setInterval(timer, 29);
     function timer(){
         time += 1;
-        time_line.getElementsByClassName.width = time + "px";
+        time_line.style.width = time + "px";
         if(time > 549){
             clearInterval(counterLine);
         }
